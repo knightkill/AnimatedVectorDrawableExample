@@ -1,0 +1,169 @@
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt">
+    <aapt:attr name="android:drawable">
+        <vector
+            android:width="24dp"
+            android:height="24dp"
+            android:viewportHeight="60.0"
+            android:viewportWidth="60.0"
+
+            >
+            <group
+                android:pivotX="30"
+                android:pivotY="30"
+                android:scaleX="0.9"
+                android:scaleY="0.9">
+                <path
+                    android:name="circle1"
+                    android:fillColor="#00000000"
+                    android:fillType="evenOdd"
+                    android:pathData="
+                M 26.25 30
+                A 3.75 3.75 0 0 0 33.75 30
+                A 3.75 3.75 0 0 0 26.25 30
+                Z"
+                    android:strokeColor="#fff"
+                    android:strokeWidth="3" />
+
+                <path
+                    android:name="circle2"
+                    android:fillColor="#00000000"
+                    android:fillType="evenOdd"
+                    android:strokeAlpha="0"
+                    android:pathData="
+                M 15 30
+                A 15 15 0 0 0 45 30
+                A 15 15 0 0 0 15 30
+                Z"
+
+                    android:strokeColor="#fff"
+                    android:strokeWidth="2" />
+                <path
+                    android:name="circle3"
+                    android:fillColor="#00000000"
+                    android:fillType="evenOdd"
+                    android:pathData="
+                M 5 30
+                A 25 25 0 0 0 50 30
+                A 25 25 0 0 0 5 30
+                Z"
+                    android:strokeAlpha="0"
+                    android:strokeColor="#fff"
+                    android:strokeWidth="2" />
+            </group>
+        </vector>
+    </aapt:attr>
+    <target android:name="circle1">
+        <aapt:attr name="android:animation">
+            <set>
+                <objectAnimator
+                    android:duration="750"
+                    android:interpolator="@android:interpolator/fast_out_linear_in"
+                    android:propertyName="pathData"
+                    android:valueFrom="
+                M 26.25 30
+                A 3.75 3.75 0 0 0 33.75 30
+                A 3.75 3.75 0 0 0 26.25 30
+                Z"
+
+                    android:valueTo="
+                M 22.5 30
+                A 7.5 7.5 0 0 0 37.5 30
+                A 7.5 7.5 0 0 0 22.5 30
+                Z"
+                    android:valueType="pathType" />
+
+                <objectAnimator
+                    android:duration="750"
+                    android:interpolator="@android:interpolator/linear_out_slow_in"
+                    android:propertyName="pathData"
+                    android:startOffset="750"
+                    android:valueFrom="
+                M 22.5 30
+                A 7.5 7.5 0 0 0 37.5 30
+                A 7.5 7.5 0 0 0 22.5 30
+                Z"
+
+                    android:valueTo="
+                M 26.25 30
+                A 3.75 3.75 0 0 0 33.75 30
+                A 3.75 3.75 0 0 0 26.25 30
+                Z"
+                    android:valueType="pathType" />
+            </set>
+        </aapt:attr>
+    </target>
+    <target android:name="circle2">
+        <aapt:attr name="android:animation">
+            <set>
+                <objectAnimator
+                    android:duration="900"
+                    android:startOffset="600"
+                    android:interpolator="@android:interpolator/linear_out_slow_in"
+                    android:propertyName="pathData"
+                    android:valueFrom="
+                M 15 30
+                A 15 15 0 0 0 45 30
+                A 15 15 0 0 0 15 30
+                Z"
+
+                    android:valueTo="
+                M 0 30
+                A 30 30 0 0 0 60 30
+                A 30 30 0 0 0 0 30
+                Z"
+                    android:valueType="pathType" />
+
+                <objectAnimator
+                    android:duration="900"
+                    android:startOffset="600"
+                    android:interpolator="@android:interpolator/linear_out_slow_in"
+                    android:propertyName="strokeAlpha"
+                    android:valueFrom="1"
+                    android:valueTo="0.2"
+                    android:valueType="floatType" />
+            </set>
+        </aapt:attr>
+    </target>
+    <target android:name="circle3">
+        <aapt:attr name="android:animation">
+            <set>
+                <objectAnimator
+                    android:duration="200"
+                    android:interpolator="@android:interpolator/linear_out_slow_in"
+                    android:propertyName="strokeAlpha"
+                    android:valueFrom="0"
+                    android:valueTo="0"
+                    android:valueType="floatType" />
+                <objectAnimator
+                    android:duration="600"
+                    android:startOffset="200"
+                    android:interpolator="@android:interpolator/linear_out_slow_in"
+                    android:propertyName="pathData"
+                    android:valueFrom="
+                M 10 30
+                A 20 20 0 0 0 50 30
+                A 20 20 0 0 0 10 30
+                Z"
+
+                    android:valueTo="
+                M 0 30
+                A 30 30 0 0 0 60 30
+                A 30 30 0 0 0 0 30
+                Z"
+                    android:valueType="pathType" />
+
+                <objectAnimator
+                    android:duration="600"
+                    android:startOffset="200"
+                    android:interpolator="@android:interpolator/linear_out_slow_in"
+                    android:propertyName="strokeAlpha"
+                    android:valueFrom="1"
+                    android:valueTo="0"
+                    android:valueType="floatType" />
+            </set>
+        </aapt:attr>
+    </target>
+
+
+</animated-vector>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/pressed" android:drawable="@drawable/plus_minus_pressed"
+        android:state_pressed="true"/>
+    <item android:id="@+id/unpressed" android:drawable="@drawable/plus_minus_unpressed" />
+
+    <transition
+        android:drawable="@drawable/avd_pressed_unpressed"
+        android:fromId="@+id/pressed"
+        android:toId="@+id/unpressed"
+        />
+    <transition
+        android:drawable="@drawable/avd_unpressed_pressed"
+        android:fromId="@+id/unpressed"
+        android:toId="@+id/pressed"
+        />
+</animated-selector>

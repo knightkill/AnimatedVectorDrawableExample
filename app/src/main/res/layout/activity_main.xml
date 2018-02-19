@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:padding="10dp"
+android:background="#000"
+tools:context="com.anormaly.animatedvectordrawableexample.MainActivity">
+
+<ImageView
+    android:id="@+id/demo1"
+
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:layout_marginStart="8dp"
+    android:background="#2ECC71"
+    android:padding="20dp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:srcCompat="@drawable/demo" />
+
+<ImageView
+    android:id="@+id/demo2"
+
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginStart="8dp"
+    android:background="#34495E"
+    android:padding="20dp"
+    app:layout_constraintEnd_toStartOf="@+id/demo3"
+    app:layout_constraintStart_toEndOf="@+id/demo1"
+    app:layout_constraintTop_toTopOf="parent"
+    app:srcCompat="@drawable/demo2" />
+
+<ImageView
+    android:id="@+id/demo3"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:layout_marginEnd="8dp"
+    android:background="#2ECC71"
+    android:padding="20dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:srcCompat="@drawable/demo3" />
+
+    <ImageButton
+        android:id="@+id/demo5"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="#E74C3C"
+        android:padding="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/demo2"
+        app:srcCompat="@drawable/plus_minus" />
+
+    <Button
+        android:id="@+id/lightSaberButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="Light Saber"
+        android:textColor="#ffd700"
+        style="@style/Base.Widget.AppCompat.Button.Borderless"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>

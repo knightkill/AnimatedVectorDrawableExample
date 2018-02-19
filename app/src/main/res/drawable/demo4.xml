@@ -1,0 +1,57 @@
+<animated-vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt">
+    <aapt:attr name="android:drawable">
+        <vector
+            android:name="vector"
+            android:width="50dp"
+            android:height="50dp"
+            android:viewportWidth="50"
+            android:viewportHeight="50">
+            <path
+                android:name="vertical_line"
+                android:pathData="M 25 10 L 25 40"
+                android:strokeColor="#ffffff"
+                android:strokeWidth="4"
+                android:strokeLineCap="round"/>
+            <path
+                android:name="horizontal_line"
+                android:pathData="M 10 25 L 40 25"
+                android:strokeColor="#ffffff"
+                android:strokeWidth="4"
+                android:strokeLineCap="round"/>
+        </vector>
+    </aapt:attr>
+    <target android:name="vertical_line">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:propertyName="pathData"
+                android:duration="240"
+                android:valueFrom="M 25 10 L 25 40"
+                android:valueTo="M 10 25 L 40 25"
+                android:valueType="pathType"
+                android:interpolator="@android:anim/linear_interpolator"/>
+        </aapt:attr>
+    </target>
+    <target android:name="horizontal_line">
+        <aapt:attr name="android:animation">
+            <set>
+                <objectAnimator
+                    android:propertyName="pathData"
+                    android:duration="120"
+                    android:valueFrom="M 10 25 L 40 25"
+                    android:valueTo="M 25 40 L 25 10"
+                    android:valueType="pathType"
+                    android:interpolator="@android:anim/linear_interpolator"/>
+                <objectAnimator
+                    android:propertyName="pathData"
+                    android:startOffset="120"
+                    android:duration="120"
+                    android:valueFrom="M 25 40 L 25 10"
+                    android:valueTo="M 40 25 L 10 25"
+                    android:valueType="pathType"
+                    android:interpolator="@android:anim/linear_interpolator"/>
+            </set>
+        </aapt:attr>
+    </target>
+</animated-vector>

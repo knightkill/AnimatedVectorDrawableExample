@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:drawable="@drawable/plus_minus_pressed">
+    <target android:name="vertical_line">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:duration="240"
+                android:interpolator="@android:anim/linear_interpolator"
+                android:propertyName="pathData"
+                android:valueFrom="M 25 10 L 25 40"
+                android:valueTo="M 10 25 L 40 25"
+                android:valueType="pathType" />
+        </aapt:attr>
+    </target>
+    <target android:name="horizontal_line">
+        <aapt:attr name="android:animation">
+            <set>
+                <objectAnimator
+                    android:duration="120"
+                    android:interpolator="@android:anim/linear_interpolator"
+                    android:propertyName="pathData"
+                    android:valueFrom="M 10 25 L 40 25"
+                    android:valueTo="M 25 40 L 25 10"
+                    android:valueType="pathType" />
+                <objectAnimator
+                    android:duration="120"
+                    android:interpolator="@android:anim/linear_interpolator"
+                    android:propertyName="pathData"
+                    android:startOffset="120"
+                    android:valueFrom="M 25 40 L 25 10"
+                    android:valueTo="M 40 25 L 10 25"
+                    android:valueType="pathType" />
+            </set>
+        </aapt:attr>
+    </target>
+</animated-vector>
